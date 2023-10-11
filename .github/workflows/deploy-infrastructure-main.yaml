@@ -1,4 +1,4 @@
-name: Deploy Terraform infrastructure
+name: Deploy Terraform infrastructure - main
 on: 
   push:
     paths:
