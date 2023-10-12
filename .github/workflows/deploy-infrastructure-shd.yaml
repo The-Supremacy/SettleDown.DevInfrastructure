@@ -1,4 +1,4 @@
-name: Deploy Terraform infrastructure - Main
+name: Deploy Terraform infrastructure - Shared
 on: 
   push:
     branches:
