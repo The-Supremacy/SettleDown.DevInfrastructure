@@ -15,6 +15,6 @@ output "acr_login_admin_username" {
 }
 
 output "acr_login_admin_password" {
-  value = module.acr.acr_login_admin_password
+  value     = module.acr.acr_login_admin_password
   sensitive = true
 }
