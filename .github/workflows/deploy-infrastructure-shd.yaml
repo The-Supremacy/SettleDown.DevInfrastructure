@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - deploy/**
-      - .github/workflows/deploy-infrastructure.yaml
+      - .github/workflows/deploy-infrastructure-shd.yaml
     
 
 permissions:
