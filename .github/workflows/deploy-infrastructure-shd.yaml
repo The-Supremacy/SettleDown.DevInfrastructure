@@ -15,8 +15,9 @@ permissions:
 jobs: 
   deploy:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./deploy
+    defaults:
+      run:
+        working-directory: ./deploy
 
     steps:
     - name: 'Az CLI login'
