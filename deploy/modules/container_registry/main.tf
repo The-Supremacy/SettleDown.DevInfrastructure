@@ -23,3 +23,13 @@ resource "azurerm_container_registry" "acr" {
     prevent_destroy = true
   }  
 }
+
+data "azuread_service_principal" "cicdprincipal" {
+  display_name = var.azure_cicd_sp_name
+}
+
+resource "azurerm_role_assignment" "acr_pull" {
+  scope                = azurerm_container_registry.acr.id
+  role_definition_name = "AcrPull"
+  principal_id         = data.azuread_service_principal.cicdprincipal.application_id
+}
