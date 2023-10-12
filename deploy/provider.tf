@@ -21,5 +21,6 @@ terraform {
 }
 
 provider "azurerm" {
+  subscription_id = var.shared_subscription_id
   features {}
 }
