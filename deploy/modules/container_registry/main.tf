@@ -31,5 +31,11 @@ data "azuread_service_principal" "cicdprincipal" {
 resource "azurerm_role_assignment" "acr_pull" {
   scope                = azurerm_container_registry.acr.id
   role_definition_name = "AcrPull"
-  principal_id         = data.azuread_service_principal.cicdprincipal.application_id
+  principal_id         = data.azuread_service_principal.cicdprincipal.id
+}
+
+resource "azurerm_role_assignment" "acr_push" {
+  scope                = azurerm_container_registry.acr.id
+  role_definition_name = "AcrPush"
+  principal_id         = data.azuread_service_principal.cicdprincipal.id
 }
