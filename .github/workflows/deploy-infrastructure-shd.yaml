@@ -24,7 +24,7 @@ jobs:
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET}}
       ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       TF_VAR_azure_cicd_sp_name: ${{ vars.AZURE_GITHUB_SPNAME }}
-      TF_VAR_shared_subscription_id: ${{ vars.SHARED_SUBSCRIPTION_ID }}
+      TF_VAR_shared_subscription_id: ${{ secrets.SHARED_SUBSCRIPTION_ID }}
     steps:
     - name: Checkout    
       uses: actions/checkout@v3   
