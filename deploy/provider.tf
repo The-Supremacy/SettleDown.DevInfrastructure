@@ -17,12 +17,9 @@ terraform {
     storage_account_name = "stsdtfstateshdne001"
     container_name       = "tfstate-devinfra"
     key                  = "devinfra.terraform.tfstate"
-
-    use_oidc = true
   }
 }
 
 provider "azurerm" {
   features {}
-  use_oidc = true
 }
