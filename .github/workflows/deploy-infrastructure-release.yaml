@@ -1,8 +1,8 @@
-name: Deploy Terraform infrastructure - Main
+name: Deploy Terraform infrastructure - Release
 on: 
   push:
     branches:
-      - main
+      - release/**
     paths:
       - deploy/**
       - .github/workflows/deploy-infrastructure.yaml
