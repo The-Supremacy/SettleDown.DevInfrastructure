@@ -18,13 +18,11 @@ terraform {
     container_name       = "tfstate-devinfra"
     key                  = "devinfra.terraform.tfstate"
 
-    client_id       = var.client_id
-    client_secret   = var.client_secret
-    tenant_id       = var.tenant_id
-    subscription_id = var.subscription_id
+    use_oidc = true
   }
 }
 
 provider "azurerm" {
   features {}
+  use_oidc = true
 }
