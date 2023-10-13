@@ -2,7 +2,7 @@ resource "azurerm_resource_group" "acr_rg" {
   name     = "rg-settledown-acr-shd-ne-001"
   location = "North Europe"
   tags     = {
-    Area = "DevInfrastructure"
+    Area = "DevInfrastructuret"
   }
 }
 
