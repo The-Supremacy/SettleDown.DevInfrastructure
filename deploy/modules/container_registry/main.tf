@@ -2,7 +2,7 @@ resource "azurerm_resource_group" "acr_rg" {
   name     = "rg-settledown-acr-shd-ne-001"
   location = "North Europe"
   tags     = {
-    Area = "DevInfrastructuret"
+    Area = "Dev Infrastructure"
   }
 }
 
@@ -14,7 +14,7 @@ resource "azurerm_container_registry" "acr" {
   admin_enabled                 = true 
   public_network_access_enabled = true
   tags     = {
-    Area = "DevInfrastructure"
+    Area = "Dev Infrastructure"
   }
   depends_on = [ 
     azurerm_resource_group.acr_rg 
