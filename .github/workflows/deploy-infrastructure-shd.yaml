@@ -1,4 +1,4 @@
-name: Deploy Terraform infrastructure - Shared
+name: Deploy Terraform infrastructure - Dev infrastructure - Shared
 on: 
   push:
     branches:
@@ -22,9 +22,9 @@ jobs:
       ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
       ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET}}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.SETTLEDOWN_AZURE_SHARED_SUBSCRIPTION_ID }}
       TF_VAR_azure_cicd_sp_name: ${{ vars.AZURE_GITHUB_SPNAME }}
-      TF_VAR_shared_subscription_id: ${{ secrets.SHARED_SUBSCRIPTION_ID }}
+      TF_VAR_shared_subscription_id: ${{ secrets.SETTLEDOWN_AZURE_SHARED_SUBSCRIPTION_ID }}
     steps:
     - name: Checkout    
       uses: actions/checkout@v3   
