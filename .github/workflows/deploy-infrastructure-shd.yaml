@@ -6,7 +6,6 @@ on:
     paths:
       - deploy/**
       - .github/workflows/deploy-infrastructure-shd.yaml
-    
 
 permissions:
       id-token: write
@@ -15,6 +14,7 @@ permissions:
 jobs: 
   deploy:
     runs-on: ubuntu-latest
+    environment: shd
     defaults:
       run:
         working-directory: ./deploy
